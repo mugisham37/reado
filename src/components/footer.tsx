@@ -28,57 +28,20 @@ const Footer = () => {
                             <div>
                                 <div className="footer_link no-link scroll-animation"
                                     style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div className="text-xl">Pages</div>
-                                </div><a href="/home/home-v1" aria-current="page"
+                                    <div className="text-xl">Quick Links</div>
+                                </div><a href="/" aria-current="page"
                                     className="footer_link scroll-animation w-inline-block w--current"
                                     style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div>Home V.1</div>
-                                </a><a href="/home/home-v2" className="footer_link scroll-animation w-inline-block"
-                                    style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div>Home V.2</div>
-                                </a><a href="/home/home-v3" className="footer_link scroll-animation w-inline-block"
-                                    style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div>Home V.3</div>
-                                </a><a href="/about-us" className="footer_link scroll-animation w-inline-block"
+                                    <div>Home</div>
+                                </a><a href="/about" className="footer_link scroll-animation w-inline-block"
                                     style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
                                     <div>About Us</div>
-                                </a>
-                            </div>
-                            <div>
-                                <div className="footer_link no-link scroll-animation"
+                                </a><a href="/service" className="footer_link scroll-animation w-inline-block"
                                     style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div className="text-xl">Pages</div>
-                                </div><a href="/services/services-v1"
-                                    className="footer_link scroll-animation w-inline-block"
+                                    <div>Services</div>
+                                </a><a href="/contact" className="footer_link scroll-animation w-inline-block"
                                     style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div>Services V.1</div>
-                                </a><a href="/services/services-v2" className="footer_link scroll-animation w-inline-block"
-                                    style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div>Services V.2</div>
-                                </a><a href="/services/services-v3" className="footer_link scroll-animation w-inline-block"
-                                    style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div>Services V.3</div>
-                                </a><a href="/template/licensing" className="footer_link scroll-animation w-inline-block"
-                                    style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div>Licensing</div>
-                                </a>
-                            </div>
-                            <div>
-                                <div className="footer_link no-link scroll-animation"
-                                    style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div className="text-xl">Pages</div>
-                                </div><a href="/contact/contact-v1" className="footer_link scroll-animation w-inline-block"
-                                    style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div>Contact V.1</div>
-                                </a><a href="/contact/contact-v2" className="footer_link scroll-animation w-inline-block"
-                                    style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div>Contact V.2</div>
-                                </a><a href="/contact/contact-v3" className="footer_link scroll-animation w-inline-block"
-                                    style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div>Contact V.3</div>
-                                </a><a href="/blog" className="footer_link scroll-animation w-inline-block"
-                                    style={{opacity: 1, transform: 'translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d'}}>
-                                    <div>Blog</div>
+                                    <div>Contact</div>
                                 </a>
                             </div>
                         </div>

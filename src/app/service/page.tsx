@@ -6,12 +6,12 @@ import Cta from '@/src/components/service/cta'
 
 const ServicePage = () => {
   return (
-    <main className="main-wrapper">
+    <>
       <Service />
       <Solutions />
       <Testimonial />
       <Cta />
-    </main>
+    </>
   )
 }
 
