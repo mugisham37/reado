@@ -11,7 +11,7 @@ export default function NotFound() {
       <section style={{ padding: '170px 0', textAlign: 'center' }}>
         <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: 20, alignItems: 'center' }}>
           <h1 className="h1">404</h1>
-          <p className="body">The page you're looking for doesn't exist.</p>
+          <p className="body">The page you&apos;re looking for doesn&apos;t exist.</p>
           <Button href="/" variant="dark">Back to Home</Button>
         </div>
       </section>

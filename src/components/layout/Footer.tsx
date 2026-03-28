@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Divider } from '../ui/Decorative'
 import { Button } from '../ui/Button'
@@ -27,7 +28,7 @@ export function Footer() {
           {/* Left - Logo + Subscribe */}
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 30 }}>
             <Link href="/">
-              <img src={images.logoWhite} alt="Reado" style={{ width: 154, height: 'auto' }} />
+              <Image src={images.logoWhite} alt="Reado" width={154} height={40} style={{ height: 'auto' }} />
             </Link>
             <div style={{ maxWidth: 500, display: 'flex', flexDirection: 'column', gap: 10 }}>
               <h6 className="h-small" style={{ color: 'var(--white)' }}>Never miss an update</h6>
@@ -51,7 +52,7 @@ export function Footer() {
                 </div>
               </div>
               <Link href="/legal-pages/privacy-policy" className="text-sm" style={{ color: 'var(--neutral-gray)' }}>
-                By subscribing to Reado's newsletter, you agree to our Privacy Policy.
+                By subscribing to Reado&apos;s newsletter, you agree to our Privacy Policy.
               </Link>
             </div>
           </div>

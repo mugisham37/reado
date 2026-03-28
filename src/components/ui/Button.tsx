@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import NextLink from 'next/link'
+import Image from 'next/image'
 
 interface ButtonProps {
   children: React.ReactNode
@@ -63,9 +64,11 @@ export function NavButton({ href = '/subscribe', label = 'Subscribe' }: { href?:
     <Button href={href} variant="dark">
       <span>{label}</span>
       <span style={{ display: 'flex', alignItems: 'center', marginLeft: 6 }}>
-        <img
+        <Image
           src="https://framerusercontent.com/images/tBMERP9IF9GYm76gyrbFKTcXkM.svg"
           alt=""
+          width={14}
+          height={14}
           style={{ width: 14, height: 'auto' }}
         />
       </span>

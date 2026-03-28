@@ -31,7 +31,7 @@ export default function About() {
                   Welcome to Reado, your go-to source for insights, tips, and stories that inspire curiosity and learning. Our mission is to provide readers with high-quality content across topics like lifestyle, travel, productivity, health, finance, and technology.
                 </p>
                 <p className="body">
-                  We're passionate about storytelling, creating a space where ideas come alive, curiosity thrives, and readers feel inspired to make informed choices.
+                  We&apos;re passionate about storytelling, creating a space where ideas come alive, curiosity thrives, and readers feel inspired to make informed choices.
                 </p>
               </div>
 
@@ -133,7 +133,7 @@ export default function About() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <h4 className="h4">Collaborate or Partner</h4>
                 <p className="body">
-                  Interested in joining the Reado team, exploring partnerships, or sharing ideas? We'd love to connect. We don't exchange products for features or run banner ads, but we're always open to meaningful collaborations. Reach out anytime at{' '}
+                  Interested in joining the Reado team, exploring partnerships, or sharing ideas? We&apos;d love to connect. We don&apos;t exchange products for features or run banner ads, but we&apos;re always open to meaningful collaborations. Reach out anytime at{' '}
                   <a href="mailto:partnerships@reado.com" style={{ textDecoration: 'underline' }}>partnerships@reado.com</a>
                 </p>
               </div>

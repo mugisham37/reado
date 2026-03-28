@@ -61,7 +61,7 @@ function HeroSection() {
               <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
                 <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
                   <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    <h6 className="h6">Don't miss a thing</h6>
+                    <h6 className="h6">Don&apos;t miss a thing</h6>
                     <p className="body" style={{ maxWidth: '80%' }}>Subscribe to get updates straight to your inbox.</p>
                   </div>
                   <img src={images.subscribeIllustration} alt="" style={{ maxWidth: 130, height: 'auto' }} />
@@ -157,7 +157,7 @@ function EditorsChoiceSection() {
       style={{ padding: '0 0 170px 0' }}
     >
       <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
-        <h2 className="h2">Editor's choice</h2>
+        <h2 className="h2">Editor&apos;s choice</h2>
         <Divider />
         <div style={{ display: 'flex', flexDirection: 'column', gap: 50 }}>
           {blogPosts.slice(2, 4).map((post) => (

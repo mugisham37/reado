@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 // Three-dot decorative ornament: 3 circles, 8px each, 2px gap, border-only
 export function DotOrnament({ color = 'var(--dark-charcoal)' }: { color?: string }) {
@@ -59,27 +60,35 @@ export function DecoratedBorder({ children, className }: { children: React.React
   return (
     <div style={{ position: 'relative', backgroundColor: 'var(--white)', padding: 30, overflow: 'hidden' }} className={className}>
       {/* Top border */}
-      <img
+      <Image
         src="https://framerusercontent.com/images/kVZzMIEr2stOUElhUEqYUTd4MgE.svg"
         alt=""
+        width={1000}
+        height={5}
         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 5 }}
       />
       {/* Bottom border */}
-      <img
+      <Image
         src="https://framerusercontent.com/images/kVZzMIEr2stOUElhUEqYUTd4MgE.svg"
         alt=""
+        width={1000}
+        height={5}
         style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: 5 }}
       />
       {/* Left border */}
-      <img
+      <Image
         src="https://framerusercontent.com/images/Qa0UvZ1Zorl06gRRPfcIzni7IWc.svg"
         alt=""
+        width={5}
+        height={1000}
         style={{ position: 'absolute', top: 0, left: 0, width: 5, height: '100%' }}
       />
       {/* Right border */}
-      <img
+      <Image
         src="https://framerusercontent.com/images/Qa0UvZ1Zorl06gRRPfcIzni7IWc.svg"
         alt=""
+        width={5}
+        height={1000}
         style={{ position: 'absolute', top: 0, right: 0, width: 5, height: '100%' }}
       />
       {children}

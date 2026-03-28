@@ -48,7 +48,7 @@ export default function LegalPage({ params }: LegalPageProps) {
           <section style={{ marginBottom: 40 }}>
             <h2 className="h4">2. Key Information</h2>
             <p className="body" style={{ marginTop: 15, color: 'var(--neutral-gray)' }}>
-              We collect and process information in accordance with applicable laws and regulations. Your privacy and data security are paramount to us, and we're committed to maintaining the highest standards of data protection.
+              We collect and process information in accordance with applicable laws and regulations. Your privacy and data security are paramount to us, and we&apos;re committed to maintaining the highest standards of data protection.
             </p>
             <ul style={{ marginTop: 15, paddingLeft: 20 }}>
               <li style={{ marginBottom: 10, color: 'var(--neutral-gray)' }}>We respect your privacy</li>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { NavButton } from '../ui/Button'
@@ -27,7 +28,7 @@ export function Navigation() {
         <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
           {/* Logo */}
           <Link href="/" style={{ flexShrink: 0 }}>
-            <img src={images.logoDark} alt="Reado" style={{ width: 156, height: 'auto' }} />
+            <Image src={images.logoDark} alt="Reado" width={156} height={40} style={{ height: 'auto' }} />
           </Link>
 
           {/* Desktop nav links */}
@@ -50,7 +51,7 @@ export function Navigation() {
               gap: 6,
             }}
           >
-            <img src={images.searchIcon} alt="" style={{ width: 10, height: 10 }} />
+            <Image src={images.searchIcon} alt="" width={10} height={10} style={{ width: 10, height: 10 }} />
             <span className="text-sm" style={{ color: 'var(--dark-charcoal)' }}>Search all</span>
           </div>
 
@@ -125,7 +126,7 @@ export function Navigation() {
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Link href="/" onClick={() => setMenuOpen(false)}>
-                  <img src={images.logoDark} alt="Reado" style={{ width: 120, height: 'auto' }} />
+                  <Image src={images.logoDark} alt="Reado" width={120} height={32} style={{ height: 'auto' }} />
                 </Link>
                 <button
                   onClick={() => setMenuOpen(false)}
