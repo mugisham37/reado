@@ -65,9 +65,9 @@ function HeroSection() {
                 <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
                   <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 4 }}>
                     <h6 className="h6">Don&apos;t miss a thing</h6>
-                   Image src={images.subscribeIllustration} alt="" width={130} height={120} }}>Subscribe to get updates straight to your inbox.</p>
+                    <p className="body" style={{ maxWidth: '80%' }}>Subscribe to get updates straight to your inbox.</p>
                   </div>
-                  <img src={images.subscribeIllustration} alt="" style={{ maxWidth: 130, height: 'auto' }} />
+                  <Image src={images.subscribeIllustration} alt="" width={130} height={120} style={{ maxWidth: 130, height: 'auto' }} />
                 </div>
                 <div style={{ position: 'relative' }}>
                   <input
@@ -296,13 +296,13 @@ function AuthorSpotlightSection() {
 function AdvertisementSection() {
   return (
     <section>
-      <div Image
+      <div className="container">
+        <a href="https://www.framer.com/@webestica/" target="_blank" rel="noopener noreferrer">
+          <Image
             src={images.adBanner1}
             alt="Advertisement"
             width={800}
             height={200}
-            src={images.adBanner1}
-            alt="Advertisement"
             style={{ width: '100%', height: 'auto', border: '1px solid var(--black)' }}
           />
         </a>
@@ -337,11 +337,11 @@ function MoreStoriesSection() {
             <BlogCard post={blogPosts[5]} variant="split" />
           </div>
           {/* Column 4: Cards + ad */}
-          <div Image src={images.adBanner2} alt="Ad" width={300} height={200}tion: 'column', gap: 30 }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
             <BlogCard post={blogPosts[6]} variant="small" />
             <BlogCard post={blogPosts[7]} variant="small" />
             <a href="https://www.framer.com/@webestica/" target="_blank" rel="noopener noreferrer">
-              <img src={images.adBanner2} alt="Ad" style={{ width: '100%', height: 'auto', border: '1px solid var(--black)' }} />
+              <Image src={images.adBanner2} alt="Ad" width={300} height={200} style={{ width: '100%', height: 'auto', border: '1px solid var(--black)' }} />
             </a>
           </div>
         </div>

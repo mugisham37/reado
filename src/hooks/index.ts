@@ -65,9 +65,9 @@ export function useScrollProgress() {
 }
 
 // ─── Section Appear-on-Scroll ───────────────────────────────────
-export function useInViewAnimation(margin: string = '-100px') {
+export function useInViewAnimation(margin = '-100px') {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin })
+  const isInView = useInView(ref, { once: true, margin: margin as any })
   return { ref, isInView }
 }
 
