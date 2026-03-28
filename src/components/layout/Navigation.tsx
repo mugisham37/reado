@@ -124,7 +124,7 @@ export function Navigation() {
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <Link to="/" onClick={() => setMenuOpen(false)}>
+                <Link href="/" onClick={() => setMenuOpen(false)}>
                   <img src={images.logoDark} alt="Reado" style={{ width: 120, height: 'auto' }} />
                 </Link>
                 <button
@@ -136,8 +136,8 @@ export function Navigation() {
               </div>
               {navLinks.map((link) => (
                 <Link
-                  key={link.to}
-                  to={link.to}
+                  key={link.href}
+                  href={link.href}
                   onClick={() => setMenuOpen(false)}
                   className="text-nav"
                   style={{ padding: '10px 0', borderBottom: '1px solid var(--silver)' }}
@@ -167,9 +167,9 @@ export function Navigation() {
 }
 
 // Nav link with animated dot indicator
-function NavLink({ to, label, isActive }: { to: string; label: string; isActive: boolean }) {
+function NavLink({ href, label, isActive }: { href: string; label: string; isActive: boolean }) {
   return (
-    <Link to={to} style={{ textDecoration: 'none', color: 'inherit' }}>
+    <Link href={href} style={{ textDecoration: 'none', color: 'inherit' }}>
       <motion.div
         style={{ display: 'flex', alignItems: 'center', gap: 4 }}
         whileHover="hover"

@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom'
+'use client'
+
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Divider } from '../ui/Decorative'
 import { Button } from '../ui/Button'
@@ -24,7 +26,7 @@ export function Footer() {
         <div className="footer-top" style={{ display: 'flex', gap: 50, alignItems: 'flex-start' }}>
           {/* Left - Logo + Subscribe */}
           <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 30 }}>
-            <Link to="/">
+            <Link href="/">
               <img src={images.logoWhite} alt="Reado" style={{ width: 154, height: 'auto' }} />
             </Link>
             <div style={{ maxWidth: 500, display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -48,7 +50,7 @@ export function Footer() {
                   <Button variant="white">Subscribe</Button>
                 </div>
               </div>
-              <Link to="/legal-pages/privacy-policy" className="text-sm" style={{ color: 'var(--neutral-gray)' }}>
+              <Link href="/legal-pages/privacy-policy" className="text-sm" style={{ color: 'var(--neutral-gray)' }}>
                 By subscribing to Reado's newsletter, you agree to our Privacy Policy.
               </Link>
             </div>
@@ -61,15 +63,15 @@ export function Footer() {
               <h6 className="h6" style={{ color: 'var(--white)' }}>Pages</h6>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                 {[
-                  { label: 'Home', to: '/' },
-                  { label: 'Blog', to: '/blog' },
-                  { label: 'Authors', to: '/author' },
-                  { label: 'Categories', to: '/categories' },
-                  { label: 'Podcast', to: '/podcast' },
-                  { label: 'About/contact', to: '/about' },
-                  { label: 'Subscribe', to: '/subscribe' },
+                  { label: 'Home', href: '/' },
+                  { label: 'Blog', href: '/blog' },
+                  { label: 'Authors', href: '/author' },
+                  { label: 'Categories', href: '/categories' },
+                  { label: 'Podcast', href: '/podcast' },
+                  { label: 'About/contact', href: '/about' },
+                  { label: 'Subscribe', href: '/subscribe' },
                 ].map((link) => (
-                  <FooterLink key={link.to} to={link.to}>{link.label}</FooterLink>
+                  <FooterLink key={link.href} href={link.href}>{link.label}</FooterLink>
                 ))}
               </div>
             </div>
@@ -81,7 +83,7 @@ export function Footer() {
               <h6 className="h6" style={{ color: 'var(--white)' }}>Categories</h6>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                 {categories.map((cat) => (
-                  <FooterLink key={cat.slug} to={`/categories/${cat.slug}`}>{cat.name}</FooterLink>
+                  <FooterLink key={cat.slug} href={`/categories/${cat.slug}`}>{cat.name}</FooterLink>
                 ))}
               </div>
             </div>
@@ -125,7 +127,7 @@ export function Footer() {
   )
 }
 
-function FooterLink({ children, to, href, external }: { children: React.ReactNode; to?: string; href?: string; external?: boolean }) {
+function FooterLink({ children, href, external }: { children: React.ReactNode; href?: string; external?: boolean }) {
   const inner = (
     <motion.span
       className="text-nav"
@@ -140,8 +142,8 @@ function FooterLink({ children, to, href, external }: { children: React.ReactNod
   if (external && href) {
     return <a href={href} target="_blank" rel="noopener noreferrer">{inner}</a>
   }
-  if (to) {
-    return <Link to={to}>{inner}</Link>
+  if (href) {
+    return <Link href={href}>{inner}</Link>
   }
   return inner
 }
