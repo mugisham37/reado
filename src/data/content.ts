@@ -10,7 +10,15 @@ export const categories = [
   { name: 'Tech', slug: 'tech' },
 ]
 
-export const authors = [
+export interface Author {
+  name: string
+  slug: string
+  role: string
+  image?: string
+  bio?: string
+}
+
+export const authors: Author[] = [
   { name: 'Frances Guerrero', slug: 'frances-guerrero', role: 'Founder & Editor-in-Chief', image: 'https://framerusercontent.com/images/4Aw7aEa7t22tFf2QpUG9h4PkqDU.jpg', bio: 'The Founder and Editor-in-Chief of Reado, guiding its editorial vision and overseeing content that sparks curiosity, inspires creativity, and engages readers with thoughtful storytelling.' },
   { name: 'Emily Johnson', slug: 'emily-johnson', role: 'Author', image: '', bio: '' },
   { name: 'Michael Smith', slug: 'michael-smith', role: 'Author', image: '', bio: '' },

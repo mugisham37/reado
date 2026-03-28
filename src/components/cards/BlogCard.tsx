@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { CardHeader } from '../ui/Decorative'
 import { imageZoom } from '../../lib/animations'
 import type { BlogPost } from '../../data/content'
@@ -14,7 +14,7 @@ export function BlogCard({ post, variant = 'default' }: BlogCardProps) {
   if (variant === 'featuredSmall') return <FeaturedSmallCard post={post} />
 
   return (
-    <Link to={`/blog/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}>
+    <Link href={`/blog/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block', height: '100%' }}>
       <motion.div
         initial="rest"
         whileHover="hover"
@@ -83,7 +83,7 @@ export function BlogCard({ post, variant = 'default' }: BlogCardProps) {
 
 function SmallCard({ post }: { post: BlogPost }) {
   return (
-    <Link to={`/blog/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
+    <Link href={`/blog/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
       <motion.div
         whileHover={{ opacity: 0.8 }}
         transition={{ duration: 0.2 }}
@@ -110,7 +110,7 @@ function SmallCard({ post }: { post: BlogPost }) {
 
 function FeaturedSmallCard({ post }: { post: BlogPost }) {
   return (
-    <Link to={`/blog/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', gap: 20, alignItems: 'flex-start' }}>
+    <Link href={`/blog/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit', display: 'flex', gap: 20, alignItems: 'flex-start' }}>
       <motion.div
         initial="rest"
         whileHover="hover"

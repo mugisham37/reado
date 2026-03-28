@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { categories } from '../../data/content'
 
 export function CategoryTicker() {
@@ -20,7 +20,7 @@ export function CategoryTicker() {
         {items.map((cat, i) => (
           <div key={i} style={{ display: 'contents' }}>
             <Link
-              to={`/categories/${cat.slug}`}
+              href={`/categories/${cat.slug}`}
               className="text-nav"
               style={{
                 color: 'var(--white)',

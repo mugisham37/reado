@@ -1,10 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { pageVariants } from '../lib/animations'
-import { Button } from '../components/ui/Button'
-import { DecoratedBorder } from '../components/ui/Decorative'
-import { socialLinks } from '../data/content'
+import { pageVariants } from '../../lib/animations'
+import { Button } from '../../components/ui/Button'
+import { DecoratedBorder } from '../../components/ui/Decorative'
+import { socialLinks } from '../../data/content'
 
 export default function Subscribe() {
   return (

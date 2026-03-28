@@ -1,9 +1,5 @@
-'use client'
-
-import { motion } from 'framer-motion'
-import { pageVariants } from '../../lib/animations'
-import { podcastEpisodes } from '../../data/content'
-import { Divider } from '../../components/ui/Decorative'
+import { podcastEpisodes } from '../../../data/content'
+import { Divider } from '../../../components/ui/Decorative'
 import Link from 'next/link'
 
 type Props = {
@@ -15,7 +11,7 @@ export default function PodcastPost({ params }: Props) {
   const ep = podcastEpisodes.find(e => e.slug === slug) || podcastEpisodes[0]
 
   return (
-    <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit">
+    <>
       <section style={{ padding: '70px 0 100px 0' }}>
         <div className="container" style={{ maxWidth: 960, margin: '0 auto' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 30, alignItems: 'center' }}>
@@ -39,7 +35,7 @@ export default function PodcastPost({ params }: Props) {
           <p className="body">Listen to this episode where {ep.host} discusses {ep.title.toLowerCase()}. This episode covers key insights and perspectives on the topic.</p>
         </div>
       </section>
-    </motion.div>
+    </>
   )
 }
 
