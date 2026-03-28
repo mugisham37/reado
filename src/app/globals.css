@@ -1,0 +1,209 @@
+/* Fonts — exact match from Framer project */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=switzer@400,500&display=swap');
+
+:root {
+  /* Primary */
+  --warm-beige: rgb(240, 191, 117);
+  --black: rgb(0, 0, 0);
+  --white: rgb(255, 255, 255);
+
+  /* Grays */
+  --dark-charcoal: rgb(47, 47, 47);
+  --neutral-gray: rgb(163, 163, 163);
+  --silver-gray: rgb(204, 204, 204);
+  --silver: rgb(224, 224, 224);
+  --pale-silver: rgb(233, 233, 233);
+
+  /* Transparency */
+  --black-80: rgba(0, 0, 0, 0.8);
+  --black-70: rgba(0, 0, 0, 0.7);
+  --black-50: rgba(0, 0, 0, 0.5);
+  --white-10: rgba(255, 255, 255, 0.1);
+  --transparent: rgba(255, 255, 255, 0);
+
+  /* Functional */
+  --error-bg: rgba(255, 34, 68, 0.15);
+
+  /* Page background */
+  --page-bg: var(--pale-silver);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Switzer', -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3em;
+  color: var(--black);
+  background-color: var(--page-bg);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, textarea {
+  font-family: 'Switzer', sans-serif;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Typography Classes — exact Framer text styles */
+.h1 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+}
+
+.h2 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+}
+
+.h3 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+}
+
+.h4 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+}
+
+.h5 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+}
+
+.h6 {
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+}
+
+.h-small {
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+}
+
+.body {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.3em;
+  letter-spacing: 0px;
+}
+
+.text-nav {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1em;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+
+.text-sm {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+}
+
+.text-xxs {
+  font-family: 'Switzer', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+
+/* Rich Text heading styles (used inside blog articles) */
+.rt-h2 { font-family: 'Nanum Myeongjo', serif; font-weight: 700; font-size: 30px; line-height: 1.2em; }
+.rt-h3 { font-family: 'Nanum Myeongjo', serif; font-weight: 700; font-size: 26px; line-height: 1.2em; }
+.rt-h4 { font-family: 'Nanum Myeongjo', serif; font-weight: 700; font-size: 20px; line-height: 1.2em; }
+.rt-h5 { font-family: 'Nanum Myeongjo', serif; font-weight: 700; font-size: 18px; line-height: 1.2em; }
+.rt-h6 { font-family: 'Nanum Myeongjo', serif; font-weight: 700; font-size: 17px; line-height: 1.2em; }
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Responsive */
+@media (max-width: 810px) {
+  .h1 { font-size: 45px; }
+  .h2 { font-size: 38px; }
+  .h3 { font-size: 30px; }
+  .h4 { font-size: 24px; }
+  .h5 { font-size: 20px; }
+  .container { padding: 0 20px; }
+  .container-narrow { padding: 0 20px; }
+}
+
+@media (max-width: 390px) {
+  .h1 { font-size: 34px; }
+  .h2 { font-size: 28px; }
+  .h3 { font-size: 24px; }
+  .h4 { font-size: 20px; }
+  .h5 { font-size: 18px; }
+  .h6 { font-size: 18px; }
+}
