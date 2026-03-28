@@ -1,5 +1,7 @@
+'use client'
+
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { pageVariants, sectionVariants, staggerContainer, staggerChild } from '../lib/animations'
 import { useInViewAnimation, useMouseParallax } from '../hooks'
 import { blogPosts, podcastEpisodes, images } from '../data/content'
@@ -117,7 +119,7 @@ function RecentPostsSection() {
       <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h2 className="h2">Recent posts</h2>
-          <Button to="/blog" variant="dark">view all posts</Button>
+          <Link href="/blog"><Button variant="dark">view all posts</Button></Link>
         </div>
         <Divider />
         <motion.div
@@ -182,7 +184,7 @@ function WatchSection() {
       <div className="container" style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h2 className="h2" style={{ color: 'var(--white)' }}>Watch</h2>
-          <Button to="/video-blog" variant="white">View all videos</Button>
+          <Link href="/video-blog"><Button variant="white">View all videos</Button></Link>
         </div>
         <Divider color="var(--neutral-gray)" />
         <motion.div
@@ -194,7 +196,7 @@ function WatchSection() {
         >
           {/* Featured large card spanning all columns */}
           <motion.div variants={staggerChild} style={{ gridColumn: '1 / -1' }}>
-            <Link to={`/blog/${blogPosts[3].slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link href={`/blog/${blogPosts[3].slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
               <motion.div
                 initial="rest"
                 whileHover="hover"
@@ -375,7 +377,7 @@ function PodcastsSection() {
         >
           {podcastEpisodes.map((ep) => (
             <motion.div key={ep.slug} variants={staggerChild}>
-              <Link to={`/podcast/${ep.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link href={`/podcast/${ep.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                 <motion.div
                   initial="rest"
                   whileHover="hover"

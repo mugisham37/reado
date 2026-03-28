@@ -1,10 +1,12 @@
+'use client'
+
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { pageVariants, sectionVariants, staggerContainer, staggerChild } from '../lib/animations'
-import { useInViewAnimation } from '../hooks'
-import { blogPosts, categories } from '../data/content'
-import { BlogCard } from '../components/cards/BlogCard'
-import { Button } from '../components/ui/Button'
+import { pageVariants, sectionVariants, staggerContainer, staggerChild } from '../../lib/animations'
+import { useInViewAnimation } from '../../hooks'
+import { blogPosts, categories } from '../../data/content'
+import { BlogCard } from '../../components/cards/BlogCard'
+import { Button } from '../../components/ui/Button'
 
 export default function Blog() {
   const { ref, isInView } = useInViewAnimation('-50px')

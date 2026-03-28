@@ -1,10 +1,12 @@
+'use client'
+
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
-import { pageVariants, sectionVariants } from '../lib/animations'
-import { useInViewAnimation } from '../hooks'
-import { authors, images, socialLinks } from '../data/content'
-import { Button } from '../components/ui/Button'
-import { Divider } from '../components/ui/Decorative'
+import Link from 'next/link'
+import { pageVariants, sectionVariants } from '../../lib/animations'
+import { useInViewAnimation } from '../../hooks'
+import { authors, images, socialLinks } from '../../data/content'
+import { Button } from '../../components/ui/Button'
+import { Divider } from '../../components/ui/Decorative'
 
 export default function About() {
   const { ref, isInView } = useInViewAnimation()
@@ -65,7 +67,7 @@ export default function About() {
                 <h4 className="h4">Authors</h4>
                 <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
                   {authors.filter(a => a.role === 'Author').map((author) => (
-                    <Link key={author.slug} to={`/author/${author.slug}`} className="text-nav" style={{ textDecoration: 'none' }}>
+                    <Link key={author.slug} href={`/author/${author.slug}`} className="text-nav" style={{ textDecoration: 'none' }}>
                       {author.name}
                     </Link>
                   ))}

@@ -1,21 +1,24 @@
+'use client'
+
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { NavButton } from '../ui/Button'
 import { Divider } from '../ui/Decorative'
 import { images } from '../../data/content'
 
 const navLinks = [
-  { label: 'Blog', to: '/blog' },
-  { label: 'Podcast', to: '/podcast' },
-  { label: 'Categories', to: '/categories' },
-  { label: 'Authors', to: '/author' },
-  { label: 'About', to: '/about' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Podcast', href: '/podcast' },
+  { label: 'Categories', href: '/categories' },
+  { label: 'Authors', href: '/author' },
+  { label: 'About', href: '/about' },
 ]
 
 export function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const location = useLocation()
+  const pathname = usePathname()
 
   return (
     <nav style={{ position: 'relative', zIndex: 100, padding: '30px 0' }}>
@@ -23,14 +26,14 @@ export function Navigation() {
         {/* Main nav row */}
         <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
           {/* Logo */}
-          <Link to="/" style={{ flexShrink: 0 }}>
+          <Link href="/" style={{ flexShrink: 0 }}>
             <img src={images.logoDark} alt="Reado" style={{ width: 156, height: 'auto' }} />
           </Link>
 
           {/* Desktop nav links */}
           <div className="nav-links-desktop" style={{ display: 'flex', flex: 1, justifyContent: 'center', gap: 24 }}>
             {navLinks.map((link) => (
-              <NavLink key={link.to} to={link.to} label={link.label} isActive={location.pathname.startsWith(link.to)} />
+              <NavLink key={link.href} href={link.href} label={link.label} isActive={pathname.startsWith(link.href)} />
             ))}
           </div>
 

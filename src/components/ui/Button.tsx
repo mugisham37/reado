@@ -1,9 +1,8 @@
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
+import NextLink from 'next/link'
 
 interface ButtonProps {
   children: React.ReactNode
-  to?: string
   href?: string
   variant?: 'dark' | 'white'
   onClick?: () => void
@@ -11,7 +10,7 @@ interface ButtonProps {
   disabled?: boolean
 }
 
-export function Button({ children, to, href, variant = 'dark', onClick, type = 'button', disabled }: ButtonProps) {
+export function Button({ children, href, variant = 'dark', onClick, type = 'button', disabled }: ButtonProps) {
   const isDark = variant === 'dark'
 
   const style: React.CSSProperties = {
@@ -43,19 +42,11 @@ export function Button({ children, to, href, variant = 'dark', onClick, type = '
     transition: { duration: 0.2, ease: 'easeOut' },
   }
 
-  if (to) {
-    return (
-      <motion.div {...motionProps}>
-        <Link to={to} style={{ color: 'inherit', textDecoration: 'none' }}>{children}</Link>
-      </motion.div>
-    )
-  }
-
   if (href) {
     return (
-      <motion.a href={href} target="_blank" rel="noopener noreferrer" {...motionProps}>
-        {children}
-      </motion.a>
+      <motion.div {...motionProps}>
+        <NextLink href={href} style={{ color: 'inherit', textDecoration: 'none' }}>{children}</NextLink>
+      </motion.div>
     )
   }
 
@@ -67,9 +58,9 @@ export function Button({ children, to, href, variant = 'dark', onClick, type = '
 }
 
 // Nav Subscribe button with arrow icon
-export function NavButton({ to = '/subscribe', label = 'Subscribe' }: { to?: string; label?: string }) {
+export function NavButton({ href = '/subscribe', label = 'Subscribe' }: { href?: string; label?: string }) {
   return (
-    <Button to={to} variant="dark">
+    <Button href={href} variant="dark">
       <span>{label}</span>
       <span style={{ display: 'flex', alignItems: 'center', marginLeft: 6 }}>
         <img
