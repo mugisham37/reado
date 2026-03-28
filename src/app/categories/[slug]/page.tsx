@@ -9,8 +9,8 @@ interface CategoriesPageProps {
 }
 
 export default function CategoryPage({ params }: CategoriesPageProps) {
-  const category = categories.find(c => c.slug === params.slug)
-  const postsInCategory = blogPosts.filter(p => p.category === category?.name || p.slug.includes(params.slug))
+  const category = categories.find((c: typeof categories[0]) => c.slug === params.slug)
+  const postsInCategory = blogPosts.filter((p: typeof blogPosts[0]) => p.category === category?.name || p.slug.includes(params.slug))
 
   if (!category) {
     return <div style={{ padding: 40, textAlign: 'center' }}>Category not found</div>
@@ -37,7 +37,7 @@ export default function CategoryPage({ params }: CategoriesPageProps) {
         {/* Posts Grid */}
         {postsInCategory.length > 0 ? (
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40 }}>
-            {postsInCategory.map(post => (
+            {postsInCategory.map((post: typeof blogPosts[0]) => (
               <BlogCard key={post.slug} post={post} />
             ))}
           </div>

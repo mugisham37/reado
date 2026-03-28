@@ -20,13 +20,13 @@ interface PodcastPageProps {
 }
 
 export default function PodcastEpisode({ params }: PodcastPageProps) {
-  const episode = podcastEpisodes.find(e => e.slug === params.slug)
+  const episode = podcastEpisodes.find((e: PodcastPost) => e.slug === params.slug)
 
   if (!episode) {
     return <div style={{ padding: 40, textAlign: 'center' }}>Episode not found</div>
   }
 
-  const relatedEpisodes = podcastEpisodes.filter(e => e.slug !== episode.slug)
+  const relatedEpisodes = podcastEpisodes.filter((ep: PodcastPost) => ep.slug !== episode.slug)
 
   return (
     <main style={{ padding: '100px 30px' }}>

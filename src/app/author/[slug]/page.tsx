@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { authors, blogPosts } from '../../../data/content'
 import { AuthorPostsSection } from './author-posts'
 
@@ -7,13 +8,13 @@ interface AuthorPageProps {
 }
 
 export default function AuthorPage({ params }: AuthorPageProps) {
-  const author = authors.find(a => a.slug === params.slug)
+  const author = authors.find((a: typeof authors[0]) => a.slug === params.slug)
 
   if (!author) {
     return <div style={{ padding: 40, textAlign: 'center' }}>Author not found</div>
   }
 
-  const authorPosts = blogPosts.filter(p => p.author === author.name)
+  const authorPosts = blogPosts.filter((p: typeof blogPosts[0]) => p.author === author.name)
 
   return (
     <main style={{ padding: '100px 30px' }}>
@@ -37,7 +38,7 @@ export default function AuthorPage({ params }: AuthorPageProps) {
               border: '2px solid var(--black)',
               backgroundColor: 'var(--silver)',
             }}>
-              <img src={author.image} alt={author.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <Image src={author.image} alt={author.name} width={140} height={140} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
           )}
           <h1 className="h1" style={{ marginBottom: 10 }}>{author.name}</h1>
@@ -62,8 +63,8 @@ export default function AuthorPage({ params }: AuthorPageProps) {
           <h2 className="h4">More Authors</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 40, marginTop: 40 }}>
             {authors
-              .filter(a => a.slug !== params.slug)
-              .map(a => (
+              .filter((a: typeof authors[0]) => a.slug !== params.slug)
+              .map((a: typeof authors[0]) => (
                 <Link
                   key={a.slug}
                   href={`/author/${a.slug}`}
@@ -80,7 +81,7 @@ export default function AuthorPage({ params }: AuthorPageProps) {
                         border: '1px solid var(--black)',
                         backgroundColor: 'var(--silver)',
                       }}>
-                        <img src={a.image} alt={a.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                        <Image src={a.image} alt={a.name} width={120} height={120} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                       </div>
                     )}
                     <h3 className="h6" style={{ marginBottom: 5 }}>{a.name}</h3>

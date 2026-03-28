@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, RefObject } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useInView } from 'framer-motion'
 import Lenis from 'lenis'
 
@@ -65,9 +65,9 @@ export function useScrollProgress() {
 }
 
 // ─── Section Appear-on-Scroll ───────────────────────────────────
-export function useInViewAnimation(margin = '-100px') {
+export function useInViewAnimation(margin: string = '-100px') {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: margin as any })
+  const isInView = useInView(ref, { once: true, margin })
   return { ref, isInView }
 }
 

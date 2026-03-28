@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { pageVariants, sectionVariants } from '../../lib/animations'
 import { useInViewAnimation } from '../../hooks'
 import { authors, images, socialLinks } from '../../data/content'
@@ -42,7 +43,7 @@ export default function About() {
                 <h4 className="h4">Our founder</h4>
                 <div className="founder-info" style={{ display: 'flex', gap: 20, alignItems: 'flex-start' }}>
                   <div style={{ width: '40%', flexShrink: 0, overflow: 'hidden', border: '1px solid var(--black)' }}>
-                    <img src={images.founderPhoto} alt="Frances Guerrero" style={{ width: '100%', height: 'auto', display: 'block', border: '1px solid var(--dark-charcoal)' }} />
+                    <Image src={images.founderPhoto} alt="Frances Guerrero" width={300} height={350} style={{ width: '100%', height: 'auto', display: 'block', border: '1px solid var(--dark-charcoal)' }} />
                   </div>
                   <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 20 }}>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'center' }}>

@@ -6,6 +6,7 @@ import { useInViewAnimation } from '../../hooks'
 import { authors } from '../../data/content'
 import { Divider } from '../../components/ui/Decorative'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Authors() {
   const { ref, isInView } = useInViewAnimation()
@@ -29,7 +30,7 @@ export default function Authors() {
                     style={{ border: '1px solid var(--black)', padding: 20, display: 'flex', flexDirection: 'column', gap: 10, alignItems: 'center', textAlign: 'center' }}
                   >
                     <div style={{ width: 80, height: 80, borderRadius: '50%', backgroundColor: 'var(--silver)', overflow: 'hidden', border: '1px solid var(--black)' }}>
-                      {author.image && <img src={author.image} alt={author.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
+                      {author.image && <Image src={author.image} alt={author.name} width={150} height={150} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
                     </div>
                     <h6 className="h6">{author.name}</h6>
                     <span className="text-sm" style={{ color: 'var(--neutral-gray)' }}>{author.role}</span>

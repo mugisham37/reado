@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { pageVariants, sectionVariants, staggerContainer, staggerChild } from '../lib/animations'
 import { useInViewAnimation, useMouseParallax } from '../hooks'
 import { blogPosts, podcastEpisodes, images } from '../data/content'
@@ -35,11 +36,13 @@ function HeroSection() {
         {/* Brand logo with parallax */}
         <div style={{ position: 'relative', width: '100%', textAlign: 'center' }}>
           <div ref={parallaxRef} style={{ ...parallaxStyle, position: 'relative', zIndex: 1 }}>
-            <img src={images.heroBrand} alt="Reado" style={{ width: '100%', height: 'auto' }} />
+            <Image src={images.heroBrand} alt="Reado" width={400} height={120} style={{ width: '100%', height: 'auto' }} />
           </div>
-          <img
+          <Image
             src={images.heroBgBlur}
             alt=""
+            width={400}
+            height={120}
             style={{ position: 'absolute', top: 6, left: -6, width: '100%', height: 'auto', zIndex: 0, pointerEvents: 'none' }}
           />
         </div>
@@ -62,7 +65,7 @@ function HeroSection() {
                 <div style={{ display: 'flex', gap: 10, alignItems: 'flex-start' }}>
                   <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 4 }}>
                     <h6 className="h6">Don&apos;t miss a thing</h6>
-                    <p className="body" style={{ maxWidth: '80%' }}>Subscribe to get updates straight to your inbox.</p>
+                   Image src={images.subscribeIllustration} alt="" width={130} height={120} }}>Subscribe to get updates straight to your inbox.</p>
                   </div>
                   <img src={images.subscribeIllustration} alt="" style={{ maxWidth: 130, height: 'auto' }} />
                 </div>
@@ -257,9 +260,11 @@ function AuthorSpotlightSection() {
             <DashedLine color="var(--dark-charcoal)" />
           </div>
           <div style={{ border: '1px solid var(--dark-charcoal)', overflow: 'hidden' }}>
-            <img
+            <Image
               src={images.founderPhoto}
               alt="Frances Guerrero"
+              width={300}
+              height={300}
               style={{ width: '100%', height: 'auto', display: 'block' }}
             />
           </div>
@@ -291,9 +296,11 @@ function AuthorSpotlightSection() {
 function AdvertisementSection() {
   return (
     <section>
-      <div className="container">
-        <a href="https://www.framer.com/@webestica/" target="_blank" rel="noopener noreferrer">
-          <img
+      <div Image
+            src={images.adBanner1}
+            alt="Advertisement"
+            width={800}
+            height={200}
             src={images.adBanner1}
             alt="Advertisement"
             style={{ width: '100%', height: 'auto', border: '1px solid var(--black)' }}
@@ -330,7 +337,7 @@ function MoreStoriesSection() {
             <BlogCard post={blogPosts[5]} variant="split" />
           </div>
           {/* Column 4: Cards + ad */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
+          <div Image src={images.adBanner2} alt="Ad" width={300} height={200}tion: 'column', gap: 30 }}>
             <BlogCard post={blogPosts[6]} variant="small" />
             <BlogCard post={blogPosts[7]} variant="small" />
             <a href="https://www.framer.com/@webestica/" target="_blank" rel="noopener noreferrer">

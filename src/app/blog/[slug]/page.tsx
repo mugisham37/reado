@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { blogPosts } from '../../../data/content'
 import { TOCIsland } from './toc-island'
 import { BlogCard } from '../../../components/cards/BlogCard'
@@ -44,7 +45,7 @@ export default function BlogPost({ params }: BlogPostPageProps) {
 
             {post.image && (
               <div style={{ width: '100%', height: 400, marginBottom: 60, overflow: 'hidden', border: '1px solid var(--black)' }}>
-                <img src={post.image} alt={post.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <Image src={post.image} alt={post.title} width={800} height={400} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
             )}
 
@@ -78,7 +79,7 @@ export default function BlogPost({ params }: BlogPostPageProps) {
               <section style={{ marginTop: 80 }}>
                 <h2 className="h4">Related Articles</h2>
                 <div style={{ display: 'grid', gap: 40, marginTop: 40 }}>
-                  {relatedPosts.map(p => (
+                  {relatedPosts.map((p: typeof blogPosts[0]) => (
                     <BlogCard key={p.slug} post={p} variant="split" />
                   ))}
                 </div>
@@ -93,7 +94,7 @@ export default function BlogPost({ params }: BlogPostPageProps) {
             <div style={{ marginTop: 80, paddingTop: 30, borderTop: '1px solid var(--black)' }}>
               <h3 className="h6" style={{ marginBottom: 20 }}>Recent Posts</h3>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 30 }}>
-                {recentPosts.map(p => (
+                {recentPosts.map((p: typeof blogPosts[0]) => (
                   <BlogCard key={p.slug} post={p} variant="small" />
                 ))}
               </div>
@@ -106,7 +107,7 @@ export default function BlogPost({ params }: BlogPostPageProps) {
 }
 
 export async function generateStaticParams() {
-  return blogPosts.map(post => ({
+  return blogPosts.map((post: typeof blogPosts[0]) => ({
     slug: post.slug,
   }))
 }
